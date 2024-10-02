@@ -23,6 +23,7 @@ nav {
 .nav-right {
   display: flex;
   align-items: center;
+  cursor: pointer;
   gap: 20px;
 }
 .nav-right > img {

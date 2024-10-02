@@ -1,16 +1,22 @@
 import React, { useContext } from "react";
 import "./Navbar.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 function Navbar() {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   return (
     <>
       <nav>
         <h2>Attendance System</h2>
         {user.isLoggedIn ? (
-          <div className="nav-right">
+          <div
+            className="nav-right"
+            onClick={() => {
+              navigate(`/student`);
+            }}
+          >
             <img
               src={
                 user.img_src

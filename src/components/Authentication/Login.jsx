@@ -25,7 +25,7 @@ function Login() {
         localStorage.setItem("attendance-token", response.data.token);
         await fetchUserData(response.data.token);
         toast.success("Successfully logged in");
-        navigate(`/${user.role}`); // Redirect to dashboard after successful login
+        navigate(`/student`); // Redirect to dashboard after successful login
       } catch (error) {
         const errorMsg =
           error.response?.data?.message || "Invalid ID or Password";
