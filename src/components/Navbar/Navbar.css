@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+nav > * {
+  margin: 0%;
+}
+nav {
+  padding: 15px 30px;
+  background-color: #1c3323;
+  border-bottom: 1px solid #54b07f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-right > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+/* From Uiverse.io by suda-code */
+.nav-right a {
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #54b07f;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.nav-right a:hover {
+  background-color: #2a985d;
+  box-shadow: 0 0 20px #54b07f50;
+  transform: scale(1.1);
+}
+
+.nav-right a:active {
+  background-color: #54b07f;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
