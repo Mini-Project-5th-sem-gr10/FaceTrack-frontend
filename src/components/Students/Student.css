@@ -1,0 +1,80 @@
+.userdetails {
+  width: 100%;
+}
+.userdetails h1 {
+  font-size: 40px;
+}
+.userdetails p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+.userdetails span {
+  color: #525fe1;
+}
+.green-uppersection {
+  background-color: #1c3323;
+  width: 100%;
+  height: 35vh;
+}
+.actual-details {
+  width: 80%;
+  margin: 0px 10%;
+  padding: 20px;
+  height: 45vh;
+  background-color: white;
+  transform: translateY(-25vh);
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.274);
+}
+
+.actual-details img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.course-card:hover {
+  transform: scale(1.01);
+  transition: all 100ms ease-in-out;
+}
+.course-card {
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.098);
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.course-seperator {
+  width: 100%;
+  height: 1px;
+}
+.course-card h1 {
+  font-size: 22px;
+  margin: 0px;
+}
+.course-card > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.course-card p {
+  font-size: 16px;
+  margin: 0px;
+}
+.course-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.courseslist {
+  transform: translateY(-20vh);
+  width: 80%;
+  margin: 0px 10%;
+}
