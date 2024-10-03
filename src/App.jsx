@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import Loader from "./components/Common/Loader";
 import StudentDashBoard from "./components/Students/StudentDashBoard";
+import OneSubjectAttendace from "./components/Students/OneSubjectAttendace";
 
 function App() {
   const { isLoading } = useContext(AuthContext);
@@ -29,6 +30,10 @@ function App() {
         <Route path="/" element={<Navbar />}>
           <Route path="login" element={<Login />} />
           <Route path="student" element={<StudentDashBoard />} />
+          <Route
+            path="student/:sec_id/:c_id"
+            element={<OneSubjectAttendace />}
+          />
         </Route>
       </Routes>
     </>

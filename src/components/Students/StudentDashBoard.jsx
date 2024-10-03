@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { ChevronRight, MoveRight } from "lucide-react";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { ChevronRight, MoveRight } from "lucide-react";
 import "./Student.css";
+import AttendanceChart from "./AttendanceChart";
 
 const randomCourseCardColors = [
   { bg: "#dee0f7", text: "#525fe1" },
@@ -13,11 +14,16 @@ const randomCourseCardColors = [
   { bg: "#faf2d1", text: "#b99709" },
 ];
 
-const OneCourseCard = ({ onecourse, colorIndex }) => {
+const OneCourseCard = ({ onecourse, colorIndex, sec_id }) => {
   const color =
     randomCourseCardColors[colorIndex % randomCourseCardColors.length];
+
+  const navigate = useNavigate();
   return (
     <div
+      onClick={() => {
+        navigate(`/student/${sec_id}/${onecourse.course_id}`);
+      }}
       className="course-card"
       style={{
         backgroundColor: color.bg,
@@ -61,6 +67,7 @@ function StudentDashBoard() {
           },
         });
         setUserData(response.data);
+        console.log(response.data);
       } catch (error) {
         toast.error("Failed to fetch data, please log in again.");
         localStorage.removeItem("attendance-token");
@@ -114,14 +121,21 @@ function StudentDashBoard() {
       </div>
       <div className="courseslist">
         <h1>Subjects</h1>
-        <div className="course-container">
-          {userData.enrolled_courses?.map((onecourse, index) => (
-            <OneCourseCard
-              key={onecourse.course_id}
-              onecourse={onecourse}
-              colorIndex={index}
-            />
-          ))}
+        <div className="crlist-continer">
+          <div className="course-container">
+            {userData.enrolled_courses?.map((onecourse, index) => (
+              <OneCourseCard
+                key={onecourse.course_id}
+                onecourse={onecourse}
+                colorIndex={index}
+                sec_id={userData.sec_id}
+              />
+            ))}
+          </div>
+          <div className="attendance-char-overall">
+            <h2>Subjectwise Attendance </h2>
+            <AttendanceChart data={userData.attendace} />
+          </div>
         </div>
       </div>
     </div>

@@ -44,16 +44,22 @@ function Login() {
 
   return (
     <div className="Login">
+      <div className="green-upper-side"></div>
       <form onSubmit={submitForm}>
+        <h2>Login to your account</h2>
+        <label htmlFor="name">Student_id</label>
         <input
           type="text"
+          id="name"
           name="id"
           placeholder="Enter ID"
           value={formData.id}
           onChange={handleChange}
           required
         />
+        <label htmlFor="password">Password</label>
         <input
+          id="password"
           type="text"
           name="password"
           placeholder="Enter Password"
