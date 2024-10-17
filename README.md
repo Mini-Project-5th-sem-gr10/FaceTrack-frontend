@@ -1,1 +1,1 @@
-## This repository consists the frontend of this project
+## This repository consists the frontend of this project alrady
