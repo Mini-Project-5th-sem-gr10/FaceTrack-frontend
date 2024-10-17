@@ -19,13 +19,17 @@ function Login() {
       try {
         const { id, password } = formData;
         const response = await axios.post(`${apiBaseUrl}/auth/login`, {
-          s_id: id,
+          id: id,
           password,
         });
         localStorage.setItem("attendance-token", response.data.token);
         await fetchUserData(response.data.token);
         toast.success("Successfully logged in");
-        navigate(`/student`); // Redirect to dashboard after successful login
+        if (response.data.role === "student") {
+          navigate(`/student`); // Redirect to dashboard after successful login
+        } else {
+          navigate(`/teacher`); // Redirect to dashboard after successful login
+        }
       } catch (error) {
         const errorMsg =
           error.response?.data?.message || "Invalid ID or Password";
@@ -47,7 +51,7 @@ function Login() {
       <div className="green-upper-side"></div>
       <form onSubmit={submitForm}>
         <h2>Login to your account</h2>
-        <label htmlFor="name">Student_id</label>
+        <label htmlFor="name">User Id</label>
         <input
           type="text"
           id="name"

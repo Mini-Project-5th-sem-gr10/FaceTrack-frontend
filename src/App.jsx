@@ -8,6 +8,7 @@ import { AuthContext } from "./context/AuthContext";
 import Loader from "./components/Common/Loader";
 import StudentDashBoard from "./components/Students/StudentDashBoard";
 import OneSubjectAttendace from "./components/Students/OneSubjectAttendace";
+import TeacherDashboard from "./components/Teacher/TeacherDashboard";
 
 function App() {
   const { isLoading } = useContext(AuthContext);
@@ -34,6 +35,7 @@ function App() {
             path="student/:sec_id/:c_id"
             element={<OneSubjectAttendace />}
           />
+          <Route path="teacher" element={<TeacherDashboard />} />
         </Route>
       </Routes>
     </>
