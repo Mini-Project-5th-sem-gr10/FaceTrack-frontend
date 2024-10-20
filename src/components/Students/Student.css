@@ -23,11 +23,11 @@
   margin: 0px 10%;
   padding: 20px;
   height: 45vh;
-  background-color: white;
   transform: translateY(-25vh);
   display: flex;
   align-items: center;
   gap: 5vw;
+  background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.274);
 }

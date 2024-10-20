@@ -1,0 +1,37 @@
+.StudentsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0px 10%;
+  gap: 20px;
+  transform: translateY(-15vh);
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.274);
+  align-items: center;
+}
+.onestudentrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr 4fr 3fr;
+  align-items: center;
+  width: 97%;
+  cursor: pointer;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 0px 20px;
+  background-color: #eeeeee;
+}
+.onestudentrow p {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.onestudentrow img {
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+}
