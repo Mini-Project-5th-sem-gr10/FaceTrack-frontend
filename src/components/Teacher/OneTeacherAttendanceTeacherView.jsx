@@ -107,12 +107,13 @@ function OneTeacherAttendanceTeacherView() {
         </div>
       </div>
       <div className="actual-attendace">
-        <div className="attendance_table">
+        <div className="t_attendance_table">
           <div>
             <p>Date</p>
             <p>Start Time</p>
             <p>Classroom</p>
             <p>Status</p>
+            <p></p>
           </div>
           {data.attendance.map((attendance, index) => (
             <div key={index}>
@@ -126,6 +127,7 @@ function OneTeacherAttendanceTeacherView() {
               >
                 {attendance.isPresent === "1" ? "Present" : "Absent"}
               </p>
+              <button>Change</button>
             </div>
           ))}
         </div>

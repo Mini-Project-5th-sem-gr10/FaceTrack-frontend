@@ -1,9 +1,12 @@
 import { ChevronRight, MoveRight } from "lucide-react";
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import AddItemButton from "../Common/AddItemButton";
+import AttendanceMarker from "../Common/AttendanceMarker";
 
 function TeacherOneSubject() {
   const { sec_id, course_id } = useParams();
+  const [isAddMode, setisAddMode] = useState(false);
   const [studentList, setstudentList] = useState([
     {
       roll_no: 1,
@@ -431,6 +434,13 @@ function TeacherOneSubject() {
   const courseData = {};
   return (
     <div className="UserDashboard">
+      {isAddMode && (
+        <AttendanceMarker
+          setisAddMode={setisAddMode}
+          sec_id={sec_id}
+          c_id={course_id}
+        />
+      )}
       <div className="userdetails">
         <div
           className="green-uppersection"
@@ -461,6 +471,20 @@ function TeacherOneSubject() {
           </div>
         </div>
       </div>
+      <div className="addAttendance">
+        <p>Roll No</p>
+        <p></p>
+        <p>Name</p>
+        <p>Student Id</p>
+        <span
+          onClick={() => {
+            setisAddMode(true);
+          }}
+        >
+          <AddItemButton />
+        </span>
+      </div>
+
       <div className="StudentsContainer">
         {studentList.map((student, index) => {
           return (

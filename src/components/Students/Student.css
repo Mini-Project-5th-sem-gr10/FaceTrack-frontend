@@ -116,6 +116,11 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 0px 5px;
 }
+.t_attendance_table > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 0px 5px;
+}
 .actual-attendace {
   transform: translateY(-15vh);
   width: 82%;

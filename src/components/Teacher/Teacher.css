@@ -4,12 +4,30 @@
   width: 80%;
   margin: 0px 10%;
   gap: 20px;
-  transform: translateY(-15vh);
+  transform: translateY(-5vh);
   padding: 20px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.274);
   align-items: center;
+}
+.addAttendance p {
+  color: #1c3323;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.addAttendance {
+  width: 80%;
+  margin: 0px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr 4fr 3fr;
+  padding: 20px;
+  align-items: center;
+  background-color: white;
+  transform: translateY(-10vh);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.274);
 }
 .onestudentrow {
   display: grid;
@@ -34,4 +52,107 @@
   border-radius: 5px;
   width: 45px;
   height: 45px;
+}
+
+.AttendenceMarker {
+  z-index: 100;
+  position: fixed;
+  width: 100vw;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #adadad73;
+}
+
+.AttendenceMarker > div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.AttendenceMarker form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  gap: 15px;
+}
+.cancle-btn {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #eee;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+.AttendenceMarker form button {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #1c3323;
+  color: #eee;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+.AttendenceMarker form > div {
+  display: flex;
+  flex-direction: column;
+}
+.AttendenceMarker form input:not(input[type="file"]) {
+  height: 45px;
+  padding: 0px 10px;
+  border-radius: 12px;
+  border: 1.5px solid lightgrey;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+
+/* From Uiverse.io by Yaya12085 */
+.custum-file-upload {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cacaca;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload input {
+  display: none;
 }
