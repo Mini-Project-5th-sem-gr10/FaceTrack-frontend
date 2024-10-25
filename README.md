@@ -1,8 +1,35 @@
-# React + Vite
+# Automatic Attendance Marking System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This repository contains the frontend application for the Automatic Attendance Marking System, designed to provide a user-friendly interface for managing and visualizing attendance records. Built using Vite and React, this application ensures fast performance and a responsive user experience.
 
-Currently, two official plugins are available:
+## Installation
+To get started with the frontend, clone this repository:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+git clone https://github.com/Mini-Project-5th-sem-gr10/frontend.git
+cd frontend
+```
+
+Install the necessary dependencies:
+
+```bash
+npm install
+```
+
+## Usage
+To run the application in development mode, use the following command:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173` by default.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for details.
+
+---
