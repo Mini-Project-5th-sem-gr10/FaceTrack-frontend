@@ -8,7 +8,7 @@ To get started with the frontend, clone this repository:
 
 ```bash
 git clone https://github.com/Mini-Project-5th-sem-gr10/FaceTrack-frontend.git
-cd frontend
+cd FaceTrack-frontend
 ```
 
 Install the necessary dependencies:
