@@ -7,7 +7,7 @@ This repository contains the frontend application for the Automatic Attendance M
 To get started with the frontend, clone this repository:
 
 ```bash
-git clone https://github.com/Mini-Project-5th-sem-gr10/frontend.git
+git clone https://github.com/Mini-Project-5th-sem-gr10/FaceTrack-frontend.git
 cd frontend
 ```
 
